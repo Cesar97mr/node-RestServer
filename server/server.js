@@ -1,6 +1,7 @@
 require('./config/config');
 
 
+
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
@@ -22,7 +23,6 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 //CONFIGURACION GLOBAL DE RUTAS
 app.use(require('./routes/index'));
-
 
 
 mongoose.connect(process.env.URLDB,
